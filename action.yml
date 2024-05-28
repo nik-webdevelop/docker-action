@@ -1,0 +1,19 @@
+name: docker action
+
+description: docker action description
+
+inputs:
+  name:
+    required: false
+    description: your name
+    default: Nemo
+
+outputs:
+  message:
+    description: greeting message
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+   - ${{inputs.name}}
